@@ -1,0 +1,30 @@
+
+<nav class="navbar bg-body-tertiary mt-2">
+  <div class="container-fluid">
+    <a class="navbar-brand">rails watch list🛀🏼</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <a href="<%= new_list_path %>" class="btn btn-primary" style="text-decoration: none;">create new movie</a>
+
+    </form>
+  </div>
+</nav>
+
+
+<div class="container mt-3 d-flex justify-center">
+
+  <div class="row p-4">
+  <% @lists.each do |list| %>
+
+   
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">🍌<%= list.name %>🍌</h5>
+              </div>
+              <a href="<%= list_path(list) %>" class="btn btn-primary" style="text-decoration: none;">View Details</a>
+          </div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>

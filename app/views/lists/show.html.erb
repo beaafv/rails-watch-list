@@ -1,0 +1,9 @@
+<p> hello </p>
+
+
+<% @list.movies.each do |movie|%>
+<% bookmark = Bookmark.find_by(movie: movie) %>
+<%= bookmark.comment %>
+<%= movie.title %>
+<%= movie.rating %>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>New list</h1>
+<%= form_with model: @list do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "create", class: "btn btn-primary" %>
+<% end %>
+<a href="<%= lists_path %>" class="btn btn-primary" style="text-decoration: none;">go back</a>
