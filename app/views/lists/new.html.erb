@@ -2,6 +2,9 @@
 <%= form_with model: @list do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.submit "create", class: "btn btn-primary" %>
+  <%= f.submit "create"%>
 <% end %>
-<a href="<%= lists_path %>" class="btn btn-primary" style="text-decoration: none;">go back</a>
+
+<p><a href="<%= lists_path %>" class="btn btn-primary m-4" style="text-decoration: none;">go back</a>
+</p>
+

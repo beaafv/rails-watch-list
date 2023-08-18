@@ -10,6 +10,12 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list
     @bookmark.save
+
+    if @bookmark.save
+      redirect_to lists_path, notice: "bookmark was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy

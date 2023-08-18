@@ -24,4 +24,5 @@ class ListsController < ApplicationController
   def movies_params
     params.require(:list).permit(:name)
   end
+
 end
