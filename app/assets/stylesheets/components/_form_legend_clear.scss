@@ -8,3 +8,39 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+
+.form {display: flex;
+flex-direction: column;
+gap:5px;}
+
+
+[type="submit"] {
+  display: flex;
+  width: 15vw;
+  background-color: #000000;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  margin: auto;
+  height: 5vh;
+  margin-top: 15px;
+  border-style: solid;
+  border-color: blue;
+}
+
+
+.me-2 {
+padding:10px;
+}
+
+.btn-delete {
+  background-color: black;
+  border-color: blue;
+  border-style: solid;
+  text-decoration: none;
+  color: white;
+  padding:12px 20px;
+  border-radius: 10px;
+}

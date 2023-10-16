@@ -1,7 +1,7 @@
 
-<nav class="navbar bg-body-tertiary mt-2">
+<nav class="navbar mt-2 p-4">
   <div class="container-fluid">
-    <a class="navbar-brand">My bookmarks🛀🏼</a>
+    <a class="navbar-brand">My bookmarks</a>
     <form class="d-flex" role="search">
     <a href="<%= new_list_path %>" class="btn btn-primary" style="text-decoration: none;">create a new list</a>
 
@@ -9,26 +9,20 @@
   </div>
 </nav>
 
-
+<div class="container d-flex justify-content-center vh-100">
+<div class="row align-items-center">
 
 <h1> Your list </h1>
 
 <%= link_to 'Add a bookmark', new_list_bookmark_path(@list), class: 'btn btn-primary' %>
 
-
-<div class="container mt-3 d-flex justify-center">
-
-<div class="row p-4">
 <% @list.bookmarks.each do |bookmark|%>
-    <div>
-        <div class="card">
-<div class="card-body">
- <h5 class="card-title"> <%= bookmark.comment %> </h5>
-  <h5 class="card"><%= bookmark.movie.title %> </h5>
-  <h5 class="card"><%= bookmark.movie.rating %> </h5>
-   <p><%= link_to 'delete bookmark', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'btn btn-danger' %> </p>
-   </div>
-   </div>
-   </div>
+
+ <h2>Movie Title: <%= bookmark.movie.title %> </h2>
+ <h5> description: <%= bookmark.comment %> </h5>
+  <h5> Movie Rating: <%= bookmark.movie.rating %> </h5>
+    <h5> More Details: <%= bookmark.movie.overview %> </h5>
+   <p><%= link_to 'delete bookmark', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'btn-delete' %> </p>
 <% end %>
+</div>
 </div>
