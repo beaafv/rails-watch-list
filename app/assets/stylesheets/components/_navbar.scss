@@ -40,3 +40,16 @@ body {
     border: white solid 1px;
     border-radius: 8px;
 }
+
+.search-bar:focus {width: 20vw;
+  padding: 8px 5px;
+  font-size: 16px;
+  color: #fff;
+  border: white solid 1px;
+  border-radius: 8px;
+}
+
+
+.list-show {
+  flex-direction: column;
+}
