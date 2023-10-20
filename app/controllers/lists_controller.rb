@@ -1,15 +1,20 @@
 class ListsController < ApplicationController
   def index
     @lists = List.all
+
   end
 
   def show
     @list = List.find(params[:id])
     @bookmark = @list.bookmarks
+    @list.user = current_user
+
   end
 
   def new
     @list = List.new
+    @existing_list = List.first
+
   end
 
   def create

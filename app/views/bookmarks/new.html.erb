@@ -1,8 +1,11 @@
-<h1>New Bookmark</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  
-  <%= f.submit "create", class: "btn btn-primary" %>
-<% end %>
-<a href="<%= lists_path %>" class="btn btn-primary" style="text-decoration: none;">go back</a>
+<%= render 'shared/navbar2' %>
+<div class="container vh-100 d-flex justify-content-center">
+  <div class="row align-items-center">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <h1>New Bookmark</h1>
+      <%= f.input :comment %>
+      <%= f.association :movie %>
+      <%= f.submit "create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

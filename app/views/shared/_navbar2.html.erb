@@ -1,0 +1,11 @@
+<nav class="navbar mt-2 p-4">
+  <div class="container-fluid">
+  <%= link_to 'My lists', root_path, class:"navbar-brand" %>
+    <form class="d-flex" role="search">
+    <% if @existing_list.present? %>
+  <%= link_to 'Add a new bookmark', new_list_bookmark_path(@existing_list), class: 'btn btn-primary blue-button' %>
+<% end %>
+      <a href="<%= new_list_path %>" class="btn btn-primary blue-button" style="text-decoration: none;">create a new list</a>
+    </form>
+  </div>
+</nav>
