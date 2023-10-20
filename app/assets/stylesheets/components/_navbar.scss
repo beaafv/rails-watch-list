@@ -1,7 +1,6 @@
 
 body {
-  background-color: black;
-  color:white;
+  background: linear-gradient(#141e30, #243b55);  color:white;
 }
 
 
@@ -9,9 +8,35 @@ body {
   background-color: transparent;
   color:white;
 
+
 }
 
 
 .navbar-brand {
   color:white;
+}
+
+
+.blue-button {
+  background-color:#141e30;
+  opacity: 90%;
+  border:none;
+  padding:10px 20px;
+}
+
+
+.blue-button:hover {
+  background-color:#141e30;
+  opacity:100%;
+  border:none;
+
+}
+
+
+.search-bar {width: 20vw;
+    padding: 8px 5px;
+    font-size: 16px;
+    color: #fff;
+    border: white solid 1px;
+    border-radius: 8px;
 }

@@ -4,24 +4,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://plus.unsplash.com/premium_photo-1683740128156-14c4ca18c69c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fG1vdmllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60);">
   <div class="container">
     <h1> Rails WatchList</h1>
-    <p> Save any kind of movies!</p>
+    <p> Bookmark your movies!</p>
   </div>
 </div>
-
-
 <div class="container">
-
-<div class="row p-4">
-  <% @lists.each do |list| %>
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card">
-        <%= image_tag("https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fG1vdmllfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", alt: "category image drama") %>
-        <div class="card-body">
-          <h5 class="card-title"><%= list.name %></h5>
-          <a href="<%= list_path(list) %>" class="btn btn-primary" style="text-decoration: none;">View Details</a>
-          <a href="<%=  delete_list_path(list) %>" data-turbo-method="delete" data-turbo-confirm="Are you sure?" class="btn btn-primary" style="text-decoration: none;">Delete this list</a>
-
-        </div>
+  <div class="row p-4">
+    <% @lists.each do |list| %>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <%= image_tag("https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fG1vdmllfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", alt: "category image drama") %>
+          <div class="card-body">
+            <h5 class="card-title"><%= list.name %></h5>
+            <a href="<%= list_path(list) %>" class="btn btn-primary blue-button" style="text-decoration: none;">View Details</a>
+            <a href="<%=  delete_list_path(list) %>" data-turbo-method="delete" data-turbo-confirm="Are you sure?" class="btn btn-primary blue-button" style="text-decoration: none;">Delete this list</a>
+          </div>
       </div>
     </div>
   <% end %>

@@ -10,25 +10,37 @@ legend ~ div.form-check:first-of-type {
 }
 
 
-.form {display: flex;
+.form {
+  display: flex;
 flex-direction: column;
-gap:5px;}
+gap:5px;
+}
+
+.form-text {
+  color:white;
+}
 
 
 [type="submit"] {
   display: flex;
   width: 15vw;
-  background-color: #000000;
   border-radius: 10px;
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
   justify-content: center;
   margin: auto;
   height: 5vh;
   margin-top: 15px;
   border-style: solid;
-  border-color: blue;
+  background-color: rgba(255, 255, 255, 0.951);
+  opacity: 90%;
 }
+
+[type="submit"]:hover {
+  opacity: 100%;
+  background-color: rgb(36, 59, 85);
+}
+
 
 
 .me-2 {
@@ -43,4 +55,33 @@ padding:10px;
   color: white;
   padding:12px 20px;
   border-radius: 10px;
+}
+
+
+.form-control {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  border-radius: 0px;
+}
+
+
+.form-control:focus {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: 2px 2px 1px  white;
 }
