@@ -1,11 +1,9 @@
 <div class="container vh-100 d-flex justify-content-center">
   <div class="row align-items-center">
     <h1>New list</h1>
-      <%= form_with model: @list, class:'form' do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <%= f.label :movie_category %>
-        <%= f.text_field :genre %>
+      <%= simple_form_for @list  do |f| %>
+        <%= f.input :name %>
+        <%= f.input :genre %>
         <%= f.submit "create"%>
       <% end %>
     <p>

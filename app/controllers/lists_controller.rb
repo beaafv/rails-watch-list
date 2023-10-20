@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmark = @list.bookmarks
   end
 
   def new
@@ -13,9 +14,10 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(movies_params)
+    @list.user = current_user
 
     if @list.save
-      redirect_to lists_path, notice: "list was successfully created."
+      redirect_to root_path, notice: "list was successfully created."
     else
       render :new, status: :unprocessable_entity
     end

@@ -9,7 +9,7 @@
 </div>
 <div class="container">
   <div class="row p-4">
-    <% @lists.each do |list| %>
+    <% current_user.lists.each do |list| %>
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card">
           <%= image_tag("https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fG1vdmllfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", alt: "category image drama") %>

@@ -2,6 +2,7 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
   <%= f.association :movie %>
+  
   <%= f.submit "create", class: "btn btn-primary" %>
 <% end %>
 <a href="<%= lists_path %>" class="btn btn-primary" style="text-decoration: none;">go back</a>

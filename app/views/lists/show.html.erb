@@ -6,6 +6,8 @@
     </form>
   </div>
 </nav>
+          <%= link_to 'Add a new bookmark', new_list_bookmark_path(@list), class: 'btn btn-primary blue-button' %>
+          <%= link_to 'delete this bookmark', bookmark_path(@bookmark), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: ' btn btn-primary blue-button' %>
 <div class="container d-flex mt-4 justify-content-center vh-100 list-show">
     <h1> Your list </h1>
       <% @list.bookmarks.each do |bookmark|%>
