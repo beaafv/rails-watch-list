@@ -21,6 +21,11 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+  end
+
   def movies_params
     params.require(:list).permit(:name)
   end

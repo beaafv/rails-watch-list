@@ -12,7 +12,7 @@ class BookmarksController < ApplicationController
     @bookmark.save
 
     if @bookmark.save
-      redirect_to lists_path, notice: "bookmark was successfully created."
+      redirect_to root_path, notice: "bookmark was successfully created."
     else
       render :new, status: :unprocessable_entity
     end

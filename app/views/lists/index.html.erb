@@ -19,6 +19,8 @@
         <div class="card-body">
           <h5 class="card-title"><%= list.name %></h5>
           <a href="<%= list_path(list) %>" class="btn btn-primary" style="text-decoration: none;">View Details</a>
+          <a href="<%=  delete_list_path(list) %>" data-turbo-method="delete" data-turbo-confirm="Are you sure?" class="btn btn-primary" style="text-decoration: none;">Delete this list</a>
+
         </div>
       </div>
     </div>
