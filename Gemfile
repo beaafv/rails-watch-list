@@ -8,6 +8,8 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
 ruby "3.1.2"
+gem "devise"
+
 
 
 
